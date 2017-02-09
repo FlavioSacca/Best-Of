@@ -13,3 +13,4 @@ export class ContactPage {
   }
 
 }
+export class ThumbnailPage { }
