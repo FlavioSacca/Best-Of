@@ -1,11 +1,74 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Topics</ion-title>
+    <ion-title>
+      Page Title
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openModal()">
+        <ion-icon name="options"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="action-sheets-basic-page">
-  <button ion-button block (click)="openMenu()">
-    Mostra i topic
-  </button>
+<ion-content class="card-background-page">
+  <ion-grid>
+    <ion-row>
+      <ion-col width-50>
+        <ion-card class="card-left">
+          <img src="assets/icon/l1.jpg"/>
+          <div class="card-title">Topic 1</div>
+        </ion-card>
+      </ion-col>
+      <ion-col width-50>
+        <ion-card class="card-right">
+          <img src="assets/icon/l2.jpg"/>
+          <div class="card-title">Amsterdam</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-50>
+        <ion-card class="card-left">
+          <img src="assets/icon/l3.jpg"/>
+          <div class="card-title">San Francisco</div>
+        </ion-card>
+      </ion-col>
+      <ion-col width-50>
+        <ion-card class="card-right">
+          <img src="assets/icon/l4.jpg"/>
+          <div class="card-title">Madison</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-50>
+        <ion-card class="card-left">
+          <img src="assets/icon/l3.jpg"/>
+          <div class="card-title">San Francisco</div>
+        </ion-card>
+      </ion-col>
+      <ion-col width-50>
+        <ion-card class="card-right">
+          <img src="assets/icon/l4.jpg"/>
+          <div class="card-title">Madison</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="col-icon" width-100>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+
+
+
+
 </ion-content>
