@@ -3,7 +3,8 @@ import { NavController } from 'ionic-angular';
 
 @Component({
     selector: 'page-profilo',
-    templateUrl: 'profilo.html'
+    templateUrl: 'profilo.html',
+    styleUrls: ['/pages/profilo/profilo.scss']
 })
 export class ProfilePage {
     constructor(public navCtrl: NavController) {

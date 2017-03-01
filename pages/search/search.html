@@ -3,3 +3,48 @@
         <ion-title>Ricerca utenti</ion-title>
     </ion-navbar>
 </ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Digita per cercare un utente</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-buttons end>
+            <button ion-button small (click)="openModal()">
+                Cerca
+            </button>
+        </ion-buttons>
+    </ion-list>
+
+    <ion-list>
+
+        <ion-list-header>
+            Risultati ricerca: X corrispondenze
+        </ion-list-header>
+
+        <ion-item detail-push>
+            <ion-thumbnail item-left>
+                <img src="assets/icon/l1.jpg">
+            </ion-thumbnail>
+            Persona 1
+        </ion-item>
+
+        <ion-item detail-push>
+            <ion-thumbnail item-left>
+                <img src="assets/icon/l1.jpg">
+            </ion-thumbnail>
+            Persona 2
+        </ion-item>
+
+        <ion-item detail-push>
+            <ion-thumbnail item-left>
+                <img src="assets/icon/l1.jpg">
+            </ion-thumbnail>
+            Persona 3
+        </ion-item>
+
+
+    </ion-list>
+</ion-content>
+

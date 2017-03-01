@@ -14,8 +14,8 @@ export class TabsPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
   tab1Root: any = HomePage;
-  tab2Root: any = ChatPage;
-  tab3Root: any = GalleryPage;
+  tab2Root: any = GalleryPage;
+  tab3Root: any = ChatPage;
   tab4Root: any = ProfilePage;
   tab5Root: any = TrophyPage;
   tab6Root: any = SearchPage;

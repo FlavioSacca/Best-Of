@@ -6,7 +6,8 @@ import { Platform, ActionSheetController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  styleUrls: ['/pages/home/home.scss']
 })
 export class HomePage {
 
