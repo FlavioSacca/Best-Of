@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
-
+import { AuthService } from '../../providers/auth-service';
+import { LoginPage } from '../login/login';
 import { Platform, ActionSheetController } from 'ionic-angular';
 
 @Component({
@@ -10,12 +11,20 @@ import { Platform, ActionSheetController } from 'ionic-angular';
   styleUrls: ['/pages/home/home.scss']
 })
 export class HomePage {
-
+  username = '';
+  email = '';
+  nickname;
   constructor(
       public navCtrl: NavController,
       public platform: Platform,
-      public actionsheetCtrl: ActionSheetController
-  ) { }
+      public actionsheetCtrl: ActionSheetController,
+      private auth: AuthService
+  ) {
+    let info = this.auth.getUserInfo();
+    this.username = info.name;
+    this.email = info.email;
+    this.nickname = info.nickname;
+  }
   openMenu() {
     let actionSheet = this.actionsheetCtrl.create({
       title: 'Albums',
@@ -61,6 +70,11 @@ export class HomePage {
       ]
     });
     actionSheet.present();
+  }
+  public logout() {
+    this.auth.logout().subscribe(succ => {
+      this.navCtrl.setRoot(LoginPage)
+    });
   }
 
 }

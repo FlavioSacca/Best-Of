@@ -8,6 +8,9 @@ import { TrophyPage } from '../pages/trophy/trophy';
 import { SearchPage } from '../pages/search/search';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { LoginPage } from '../pages/login/login';
+import { AuthService } from '../providers/auth-service';
+import { RegisterPage } from '../pages/register/register';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import { TabsPage } from '../pages/tabs/tabs';
     ProfilePage,
     TrophyPage,
     SearchPage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    RegisterPage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {tabsPlacement: 'top'})
@@ -32,8 +37,10 @@ import { TabsPage } from '../pages/tabs/tabs';
     ProfilePage,
     TrophyPage,
     SearchPage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    RegisterPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, AuthService]
 })
 export class AppModule {}
